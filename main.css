@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Josh Comeau custom css reste  https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  /* border: 1px solid red; */
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Space Grotesk', sans-serif;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  max-width: min(1440px, 100%);
+  margin: auto;
+  min-height: 100vh;
+}
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+.card-form {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+.cards {
+  position: relative;
+  background-image: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 483px;
+}
+
+.card-front {
+  position: absolute;
+  width: 100%;
+
+  left: 150px;
+  top: 150px;
+  padding: 2rem;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+}
+.card-front .bg-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+}
+.card-front .card-logo {
+  position: relative;
+  z-index: 9999;
+}
+.card-front .card-number {
+  position: relative;
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  height: 1.8rem;
+  z-index: 999;
+}
+.card-front .card-data {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.2rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  z-index: 999;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  /* background-image: url(images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 447px;
+  height: 245px; */
+  left: 220px;
+  top: 430px;
+  /* color: hsl(0, 0%, 100%); */
+}
+
+.card-back img {
+  width: 100%;
+}
+.card-back .cvc {
+  display: inline-block;
+  position: absolute;
+  top: 120px;
+  right: 60px;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.form-input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.form-input form {
+  /* display: grid; */
+  gap: 1.2rem;
+  transition: all 0.5s ease-in;
+}
+.form-input label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  color: hsl(278, 68%, 11%);
+  /* margin-bottom: 2rem; */
+  font-weight: 500;
+}
+
+.form-input input {
+  padding: 0.5em;
+  border-radius: 0.4em;
+  border: 2px solid hsl(270, 3%, 87%);
+  font-size: 1rem;
+  color: hsl(279, 6%, 55%);
+  margin-top: 0.2em;
+  outline: none;
+  transition: 0.5s;
+}
+
+.form-input input:focus {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  border-radius: 0.4em;
+  border: 2px solid transparent;
+}
+
+input[name='cardholdername'],
+input[name='cardnumber'] {
+  width: 100%;
+}
+.exp-date {
+  position: relative;
+}
+
+.mm {
+  position: absolute;
+}
+
+.exp-date input {
+  margin-right: 1rem;
+}
+
+.date-cvc {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.6em;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+.error-message {
+  text-transform: none;
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8rem;
+  margin-top: 0.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.show-error {
+  opacity: 1;
+}
+
+.red-border {
+  border: 2px solid hsl(0, 100%, 66%) !important;
+}
+
+.hide {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.success {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  transform: scale(0);
+  transition: all 0.5s ease-in;
+}
+
+.success h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.success img {
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+
+.success p {
+  text-transform: none;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: hsl(279, 6%, 55%);
+}
+
+.show-success {
+  transform: scale(1);
+}
+
+@media (max-width: 974px) {
+  form {
+    width: 100%;
+  }
+  footer {
+    left: 5px;
+    text-align: center;
+  }
+  .card-form {
+    flex-direction: column;
+  }
+  .cards {
+    position: relative;
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 240px;
+    width: 100%;
+  }
+  .card-front {
+    width: 70%;
+    left: 15px;
+    top: 110px;
+    z-index: 99;
+    padding: 1rem;
+  }
+  .card-front .card-logo {
+    width: 50px;
+  }
+  .card-front .card-number {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .card-front .card-data {
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .card-back {
+    width: 70%;
+    left: 74px;
+    top: 30px;
+  }
+  .card-back .cvc {
+    top: 65px;
+    left: 200px;
+    font-size: 0.6rem;
+  }
+  .form-input {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  .date-cvc {
+    width: 100%;
+    gap: 0;
+  }
+  .exp-date {
+    width: 50%;
+  }
+  .cvc {
+    width: 50%;
+  }
+  .cvc input {
+    width: 100%;
+  }
+  .card-back .cvc {
+    width: 50px;
+  }
+  .success {
+    padding: 1rem;
+  }
+  .error-message {
+    font-size: 0.6rem;
+  }
+}

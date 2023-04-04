@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div class="card-form">
+        <div class="cards">
+          <div class="card-front">
+            <img src="images/bg-card-front.png" alt="" class="bg-image" />
+            <img src="images/card-logo.svg" alt="" class="card-logo" />
+            <p class="card-number" id="cardnumber">0000 0000 0000 0000</p>
+            <div class="card-data">
+              <p class="card-name" id="cardholdername">Jane Appleseed</p>
+              <p class="card-duration">
+                <span id="month">00</span>/<span id="year">00</span>
+              </p>
+            </div>
+          </div>
+          <div class="card-back">
+            <img src="images/bg-card-back.png" alt="" />
+            <p class="cvc" id="cvc">000</p>
+          </div>
+        </div>
+        <div class="form-input">
+          <form action="">
+            <div class="cardholder-name">
+              <label for="cardholdername">Cardholder Name</label><br />
+              <input
+                type="text"
+                name="cardholdername"
+                placeholder="e.g. Jane Appleseed"
+                autocomplete="off"
+              />
+              <p class="error-message">Can't be blank</p>
+            </div>
+            <div class="card-number">
+              <label for="cardnumber">Card Number</label><br />
+              <input
+                id="input_cc"
+                type="text"
+                name="cardnumber"
+                placeholder="e.g. 1234 5678 9123 0000"
+                maxlength="19"
+                autocomplete="off"
+              />
+              <p class="error-message">Wrong format,numbers only</p>
+            </div>
+            <div class="date-cvc">
+              <div class="exp-date">
+                <label for="date">Exp. Date (MM/YY)</label><br />
+                <input
+                  id="number"
+                  type="tel"
+                  name="month"
+                  placeholder="MM"
+                  maxlength="2"
+                  size="3"
+                  autocomplete="off"
+                />
+                <p class="error-message mm">Can't be blank</p>
+                <input
+                  id="number"
+                  type="tel"
+                  name="year"
+                  placeholder="YY"
+                  maxlength="2"
+                  size="3"
+                  autocomplete="off"
+                />
+                <p class="error-message yy">Can't be blank</p>
+              </div>
+              <div class="cvc">
+                <label for="cvc">CVC</label><br />
+                <input
+                  id="number"
+                  type="tel"
+                  name="cvc"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                  autocomplete="off"
+                />
+                <p class="error-message">Can't be blank</p>
+              </div>
+            </div>
+            <button class="btn" id="submit">Confirm</button>
+          </form>
+          <div class="success">
+            <img src="images/icon-complete.svg" alt="" />
+            <h1>Thank you!</h1>
+            <p>We've added your card details</p>
+            <button class="btn">Continue</button>
+          </div>
+        </div>
+        <footer>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Marko Gilic</a>.
+        </footer>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!--   0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+   Completed state start 
+
+  Thank you!
+  We've added your card details
+  Continue
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
