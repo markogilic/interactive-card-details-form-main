@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 - [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-card-details-form-dMkh4zGrNW)
-- [Live Page](https://markogilic.github.io/expenses-chart-component-main/)
+- [Live Page](https://markogilic.github.io/interactive-card-details-form-main/)
 
 ## Author
 
